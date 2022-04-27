@@ -6,17 +6,31 @@ import "./App.css";
 import ImageSlider from  './components/ImageSlider';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import Navbar from './components/Navbar';
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import React from "react"; 
+
+import React from 'react';
 
 
 
 
 function App() {
+
+  
   return(
-    <div className="App">
-      <Signup />
-    </div>
+    <>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path='/' exact />
+      </Routes>
+      
+      </Router>
+
+    <Signup />
+
+    </>
 
     
   )
